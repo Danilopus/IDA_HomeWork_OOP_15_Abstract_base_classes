@@ -132,6 +132,7 @@
     <ClCompile Include="Base_MotherPlant.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="!_Main.cpp" />
+    <ClCompile Include="PearTree.cpp" />
     <ClCompile Include="Service functions.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="Location.h" />
     <ClInclude Include="MotherPlant.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="PearTree.h" />
     <ClInclude Include="Raspberry_bush.h" />
     <ClInclude Include="Service functions.h" />
     <ClInclude Include="raspberry.h" />

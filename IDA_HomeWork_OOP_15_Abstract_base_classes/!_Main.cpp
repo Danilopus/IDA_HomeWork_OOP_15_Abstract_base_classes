@@ -146,8 +146,6 @@ void Task_2(std::string name_of_task)
 				main_back_pack.AddItem(dynamic_cast<Fruit*>(base_fruit_ptr));
 			}
 		
-
-
 		//Осмотрим локацию после сбора урожая
 		std::cout << "\n\n--- Location_2.ShowTrees():";
 		Location_2.ShowTrees();
@@ -155,7 +153,6 @@ void Task_2(std::string name_of_task)
 		//Получим короткую сводку по рюкзаку
 		std::cout << "\n\n--- main_back_pack.ShortInfo():\n";
 		main_back_pack.ShortInfo();
-
 
 		//Получим полную сводку по рюкзаку
 		std::cout << "\n\n\nGet ready to watch full BackPack info!";
