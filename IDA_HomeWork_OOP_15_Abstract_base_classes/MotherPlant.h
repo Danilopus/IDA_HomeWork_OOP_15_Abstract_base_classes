@@ -4,8 +4,6 @@
 //#include "Fruit.h"
 #include "Base_MotherPlant.h"
 
-//enum class Color { red, green, yellow, black, brown, white };
-
 class MotherPlant : public Base_MotherPlant
 {
 protected:

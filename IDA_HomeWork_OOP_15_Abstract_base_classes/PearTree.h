@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "MotherPlant.h"
 #include "Pear.h"
 #include "Service functions.h"
@@ -16,13 +16,12 @@ public:
 		MotherPlant::Info();
 		std::cout << "\n" << _name_of_current_tree_class_;
 		std::cout << "\nremain_fruits " << _fruits_remain;
-
 	}
 
 	Fruit* Get_fruit() override
 	{
 		if (_fruits_remain <= 0) return nullptr;
-		Fruit* new_fruit = new Apple(Get_Random(0.1, 0.3), Color::red);
+		Fruit* new_fruit = new Pear(Get_Random(0.15, 0.35), Color::yellow);
 		_fruits_remain--;
 		return new_fruit;
 	}

@@ -82,6 +82,7 @@ void Task_1(std::string name_of_task)
 			std::cout << "\n     Color: " << tree_ptr->Get_color();
 			std::cout << "\n      Size: " << tree_ptr->Get_size();
 			std::cout << "\nMax fruits: " << tree_ptr->Get_max_fruits();
+					
 		}
 
 		std::cout << "\n\nEsc - exit | any key to continue";

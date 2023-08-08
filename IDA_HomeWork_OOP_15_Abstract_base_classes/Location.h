@@ -5,6 +5,10 @@
 #include "AppleTree.h"
 #include "Raspberry_bush.h"
 #include "BackPack.h"
+#include "PearTree.h"
+
+#include "Fruit.h"
+
 
 
 
@@ -24,7 +28,6 @@ public:
 	virtual void DeleteTree() = 0;
 };
 
-//class TreeLocation
 class TreeLocation : virtual public Location_TheGame_Interface, virtual public Location_Player_Interface
 {
 	std::vector<MotherPlant*> _plants_list;
@@ -35,10 +38,22 @@ public:
 		for (int i = 0; i < trees_number; i++)
 		{
 			int size = Get_Random(0, 3);
-			Color parametr = static_cast<Color>(Get_Random(0,6));
-			double max_fruits = Get_Random(50 * (size+1), 150 * (size+1));
-			if (Get_Random(0, 2)) { new_tree = new AppleTree(size, parametr, max_fruits); }
-			else new_tree = new Raspberry_bush(size, parametr, max_fruits);
+
+			enum treeTypes {Apple, Raspberry, Pear, _end_of_list};
+
+			Color parametr = static_cast<Color>(Get_Random(0,int(Color::_end_of_enum_)));
+			
+			double max_fruits = Get_Random(20 * (size+1), 50 * (size+1));
+			
+			int random_tree_choice = Get_Random(0, treeTypes(_end_of_list));
+
+			switch (random_tree_choice)
+			{
+			case 0:  new_tree = new AppleTree(size, parametr, max_fruits); break;
+			case 1:  new_tree = new Raspberry_bush(size, parametr, max_fruits); break;
+			case 2:  new_tree = new PearTree(size, parametr, max_fruits); break;
+			}
+
 			_plants_list.push_back(new_tree);
 		}
 	}

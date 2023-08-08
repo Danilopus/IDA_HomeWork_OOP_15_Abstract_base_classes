@@ -4,7 +4,7 @@
 #include "Base_Fruit.h"
 
 
-enum class Color { red, green, yellow, black, brown, white };
+enum class Color { red, green, yellow, black, brown, white, _end_of_enum_ };
 
 
 class Fruit : public Base_Fruit
