@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <string>
 #include <iostream>
-#include "Fruit.h"
+//#include "Fruit.h"
 #include "Base_MotherPlant.h"
 
 //enum class Color { red, green, yellow, black, brown, white };
@@ -35,7 +35,8 @@ public:
 		std::cout << "\n_color " << int(_color);
 	}
 
-	virtual Fruit* Get_fruit() = 0;
+	//virtual Fruit* Get_fruit() = 0;
+	Fruit* Get_fruit() override = 0;
 
 	virtual size_t Get_fruits_remain() = 0;
 	virtual std::string Get_Name() = 0;

@@ -73,10 +73,12 @@ public:
 	void Get_fruit(int tree_index, BackPack_Player_Interface* back_pack) override
 	{
 		if (tree_index <= _plants_list.size() && tree_index >= 0)
-			//*back_pack << *_plants_list[tree_index]->Get_fruit();
-			back_pack->AddItem(*_plants_list[tree_index]->Get_fruit());
+		{
+			Fruit* new_fruit = _plants_list[tree_index]->Get_fruit();
+			if (new_fruit) back_pack->AddItem(new_fruit);
+		}
 	}
-
+	size_t size() { return _plants_list.size(); }
 
 	void Info()
 	{
